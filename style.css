@@ -1,0 +1,20 @@
+:root {
+  --heading-font: Arial, sans-serif;
+  --main-font: Tahoma, sans-serif;
+  --secondary-font: monospace;
+  font-size: 1em;
+  box-sizing: border-box;
+  --color-dark: #1f2937;
+  --color-bright: #f9faf8;
+  --color-light-grey: #E5E7EB;
+  --color-accent: #3882F6;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
