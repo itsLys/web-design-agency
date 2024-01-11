@@ -13,3 +13,7 @@ The images used in this study project are the property of their respective owner
   
   
 
+- Logo Placeholders <a href="https://logoipsum.com">logoipsum.com</a>
+- Fake tweet generator <a href="https://tweethunter.io">Tweethuner.ip</a>
+
+While every effort has been made to credit the rightful owners of the images used in this study project, I acknowledge that oversights may occur. If I have unintentionally omitted or misattributed credit for any image, in this study project or any other study project, I sincerely apologize. The images are used solely for educational and practice purposes. If you are the owner or copyright holder of any image and have concerns, please do not hesitate to contact me.
