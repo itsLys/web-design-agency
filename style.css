@@ -6,7 +6,7 @@
   box-sizing: border-box;
   --color-dark: #1f2937;
   --color-bright: #f9faf8;
-  --color-light-grey: #E5E7EB;
+  --color-light-grey: #c6c6c7;
   --color-accent: #3882F6;
 
 }
@@ -23,6 +23,10 @@
   border: inherit;
   font-family: inherit;
   font-size: inherit;
+  text-decoration: inherit;
+  border-radius: inherit;
+  outline: 1px solid rgba(128, 128, 128, 0.432);
+  /* for debugging */
 }
 
 li {
@@ -45,4 +49,100 @@ h3 {
 .header:first-child {
   color: var(--color-bright);
   background-color: var(--color-dark);
+}
+
+.header:first-child>nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1em;
+  border-radius: 5px;
+  ;
+}
+
+.header:first-child>nav>* {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+}
+
+.logo-container {
+  font-family: var(--heading-font);
+  font-weight: 900;
+  font-size: 1.5em;
+}
+
+.header:first-child>nav>.nav-toggle {
+  gap: .45em;
+  background-color: ;
+}
+
+.nav-toggle:is(:focus, :hover),
+.header>nav.open>.nav-toggle {
+  background-color: #303f53;
+}
+
+.nav-toggle>.icon-bar {
+  height: 0.125rem;
+  width: 1.6875rem;
+  background-color: var(--color-bright);
+  flex-shrink: 0;
+}
+
+.header:first-child>nav>.nav-menu {
+  display: none;
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 5.625rem;
+  right: 0.625rem;
+  left: 0.625rem;
+}
+
+.header:first-child>nav>.nav-menu>* {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.button {
+  padding: .8em 2em;
+  height: 100%;
+
+}
+
+.button.primary {
+  background-color: var(--color-accent);
+  color: var(--color-bright);
+}
+
+.button.primary:is(:focus, :hover) {
+  background-color: #538fee;
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.button.secondary:is(:focus, :hover) {
+  border: 2px solid var(--color-light-grey);
+  color: var(--color-light-grey);
+}
+
+.nav-bar {
+  flex-direction: column;
+
+}
+
+.nav-bar>.nav-item>a {
+  padding: 1em;
+  display: block;
+  text-align: center;
+}
+
+.nav-bar>.nav-item>a:is(:focus, :hover) {
+  background-color: #303f53;
 }
