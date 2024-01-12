@@ -79,7 +79,7 @@ h3 {
   background-color: ;
 }
 
-.nav-toggle:is(:focus, :hover),
+
 .header>nav.open>.nav-toggle {
   background-color: #303f53;
 }
@@ -98,6 +98,10 @@ h3 {
   top: 5.625rem;
   right: 0.625rem;
   left: 0.625rem;
+}
+
+#nav.open .nav-menu {
+  display: flex;
 }
 
 .header:first-child>nav>.nav-menu>* {
@@ -146,3 +150,5 @@ h3 {
 .nav-bar>.nav-item>a:is(:focus, :hover) {
   background-color: #303f53;
 }
+
+/* Page Header */
