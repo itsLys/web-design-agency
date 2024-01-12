@@ -26,7 +26,7 @@
   text-decoration: inherit;
   border-radius: inherit;
   letter-spacing: inherit;
-  outline: 1px solid rgba(128, 128, 128, 0.432);
+  /* outline: 1px solid rgba(128, 128, 128, 0.432); */
   /* for debugging */
 }
 
@@ -49,6 +49,10 @@ h1,
 h2,
 h3 {
   font-family: var(--heading-font);
+}
+
+.page-header {
+  /* Box shadow */
 }
 
 /* Navbar */
@@ -161,6 +165,8 @@ h3 {
 /* Page Header */
 .page-header {
   padding: 1em;
+  background-color: var(--color-dark);
+  color: var(--color-bright);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -192,16 +198,12 @@ h3 {
   flex-grow: 1;
 }
 
-.page-header .button.secondary:is(:focus, :hover) {
-  border: 2px solid var(--color-dark);
-  color: var(--color-dark);
-}
+.page-header .button.secondary:is(:focus, :hover) {}
 
 /* main */
 /* How */
 section.how {
-  background-color: var(--color-dark);
-  color: var(--color-bright);
+
   padding: 1em;
   border-radius: 0;
 }
@@ -214,8 +216,8 @@ section.how {
 }
 
 .card {
-  background-color: var(--color-bright);
-  color: var(--color-dark);
+  background-color: var(--color-dark);
+  color: var(--color-bright);
   margin: 1em 0;
   padding: 1em;
   border-radius: 5px;
