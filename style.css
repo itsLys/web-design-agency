@@ -4,10 +4,10 @@
   --secondary-font: monospace;
   font-size: 1em;
   box-sizing: border-box;
-  --color-dark: #1f2937;
+  --color-dark: #1a2235;
   --color-bright: #f9faf8;
   --color-light-grey: #c6c6c7;
-  --color-accent: #3882F6;
+  --color-accent: #2677f8;
 
 }
 
@@ -51,13 +51,11 @@ h3 {
   font-family: var(--heading-font);
 }
 
-.card,
-.page-header {
-  box-shadow: 5px 6px 14px 1px rgba(0, 0, 0, 0.205);
-}
+
 
 /* Navbar */
-.header:first-child {
+.header:first-child,
+footer {
   color: var(--color-bright);
   background-color: var(--color-dark);
 }
@@ -202,26 +200,31 @@ h3 {
 .page-header .button.secondary:is(:focus, :hover) {}
 
 /* main */
-/* How */
-section.how {
+.main>* {
+  margin-bottom: 4em;
+  border-radius: 0;
+}
 
+section {
   padding: 1em;
   border-radius: 0;
 }
 
-.how>h2 {
+.main>section>h2 {
   font-size: 1.5em;
   padding: 1em;
   font-weight: 900;
   text-align: center;
 }
 
-.card {
+.card,
+.tweet-container {
   background-color: var(--color-dark);
   color: var(--color-bright);
   margin: 1em 0;
   padding: 1em;
   border-radius: 5px;
+
 }
 
 .card>h3 {
@@ -235,7 +238,89 @@ section.how {
   font-size: .9em;
 }
 
+.portfolio {
+  background-color: var(--color-dark);
+  color: var(--color-bright);
+  padding: 4em 0;
+}
+
+.portfolio>a {
+  display: block;
+  width: 340px;
+  padding: 1em;
+  margin: 0 auto 1em;
+  border-radius: 5px;
+
+  background-color: var(--color-bright);
+  color: var(--color-dark);
+  box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.25);
+
+}
+
+.showcase-image {
+  background-color: var(--color-light-grey);
+  width: 100%;
+  height: 160px;
+  padding: 4em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-text {
+  padding: 0 1em;
+}
+
+.showcase-text>h3 {
+  margin-bottom: .5em;
+}
+
+
+/* Form */
+section.form {
+  background-color: var(--color-dark);
+  color: var(--color-bright);
+  margin-bottom: 0;
+}
+
+section.form>h2 {
+  text-align: start;
+  padding: 1em;
+}
+
+section.form>form {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.email-label {
+  position: absolute;
+  left: 999999999999999px;
+  overflow: hidden;
+}
+
+footer {
+  padding: 5em;
+  text-align: center;
+}
+
 /* Shadows at the end */
 img {
   width: 100%;
+}
+
+
+.nav-menu,
+.card,
+.button.primary,
+.tweet-container {
+  box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.25);
+
+}
+
+.how {
+
+  box-shadow: -1px 6px 6px -2px rgba(0, 0, 0, 0.25) inset;
 }
