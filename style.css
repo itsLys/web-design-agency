@@ -61,14 +61,12 @@ footer {
 }
 
 .header:first-child>nav {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 1em;
-
-  ;
 }
+
 
 .header:first-child>nav>* {
   display: flex;
@@ -85,12 +83,18 @@ footer {
 
 .header:first-child>nav>.nav-toggle {
   gap: .45em;
-  background-color: ;
+
 }
 
 
 .header>nav.open>.nav-toggle {
   background-color: #303f53;
+}
+
+@media (min-width: 870px) {
+  .header>nav>.nav-toggle {
+    display: none;
+  }
 }
 
 .nav-toggle>.icon-bar {
@@ -109,13 +113,21 @@ footer {
   left: 0.625rem;
 }
 
+@media (min-width: 870px) {
+  .header:first-child>nav>.nav-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+  }
+}
+
 #nav.open .nav-menu {
   display: flex;
 }
 
 .header:first-child>nav>.nav-menu>* {
   display: flex;
-  gap: 1em;
+  gap: .5em;
   justify-content: center;
 }
 
@@ -123,8 +135,9 @@ footer {
   padding: .7em 2em;
   height: 100%;
   width: 100%;
-
 }
+
+
 
 .button.primary {
   background-color: var(--color-accent);
@@ -148,7 +161,17 @@ footer {
 
 .nav-bar {
   flex-direction: column;
+}
 
+@media (min-width: 870px) {
+  .nav-bar {
+    flex-direction: row;
+  }
+
+  .nav-item,
+  .nav-buttons>li {
+    flex-shrink: 0;
+  }
 }
 
 .nav-bar>.nav-item>a {
@@ -170,6 +193,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.header-image,
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .page-header>.header-content {
@@ -227,6 +256,35 @@ section {
 
 }
 
+@media (min-width: 870px) {
+
+  .cards-container,
+  .tweet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    align-items: stretch;
+  }
+
+  .card {
+    flex-basis: 400px;
+  }
+
+  .why-section,
+  .testimonials {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .why-section>h2,
+  .testimonials>h2 {
+    flex-basis: 100%;
+  }
+}
+
 .card>h3 {
   margin-bottom: 1em;
   font-size: 1.25em;
@@ -244,9 +302,23 @@ section {
   padding: 4em 0;
 }
 
+@media (min-width: 870px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    padding: 4em;
+  }
+
+  .portfolio>h2 {
+    flex-basis: 100%;
+  }
+}
+
 .portfolio>a {
   display: block;
-  width: 340px;
+  width: 300px;
   padding: 1em;
   margin: 0 auto 1em;
   border-radius: 5px;
@@ -255,6 +327,12 @@ section {
   color: var(--color-dark);
   box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.25);
 
+}
+
+@media (min-width: 870px) {
+  .portfolio>a {
+    margin: 0;
+  }
 }
 
 .showcase-image {
@@ -282,22 +360,47 @@ section.form {
   background-color: var(--color-dark);
   color: var(--color-bright);
   margin-bottom: 0;
+
 }
 
 section.form>h2 {
   text-align: start;
   padding: 1em;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 section.form>form {
   padding: 1em;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
 
+@media (min-width: 870px) {
+  section.form>form {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  section.form>form>.button {
+    height: auto;
+    width: max-content;
+  }
+
+  section.form>form>input {
+    flex-grow: 1;
+  }
+
+
+
+}
+
 .email-label {
   position: absolute;
-  left: 999999999999999px;
+  left: -999999999999999px;
   overflow: hidden;
 }
 
@@ -318,6 +421,12 @@ img {
 .tweet-container {
   box-shadow: 5px 5px 6px -2px rgba(0, 0, 0, 0.25);
 
+}
+
+@media (min-width: 870px) {
+  .nav-menu {
+    box-shadow: none;
+  }
 }
 
 .how {
