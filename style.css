@@ -201,6 +201,32 @@ footer {
   margin: 0 auto;
 }
 
+@media (min-width: 1440px) {
+
+  .header-image,
+  .header-content {}
+
+  .header-image {
+    width: 100%;
+  }
+
+  .page-header {
+
+    max-width: 1800px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 8em;
+  }
+
+}
+
+.page-header-container {
+  background-color: var(--color-dark);
+}
+
 .page-header>.header-content {
   margin-top: 1em;
 
